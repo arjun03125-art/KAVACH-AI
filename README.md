@@ -20,7 +20,7 @@
 
 ---
 
-## 📌 Overview
+## 📋 Overview
 
 **KAVACH-AI** (*कवच - The Shield*) is an advanced cyber defense utility engineered to detect, classify, and mitigate weak authentication credentials. Unlike traditional password checkers that rely solely on elementary character checklists, KAVACH-AI couples **Machine Learning models trained on over 600,000 real-world passwords** with **Shannon Entropy calculations** and **rule-based heuristics**.
 
@@ -35,17 +35,17 @@ It accurately identifies subtle structural vulnerabilities, predictable keyboard
   - **Ridge Regression**: Continuous regularization evaluation.
   - **Decision Tree Regressor**: Non-linear structural pattern classification.
   - **Character-level TF-IDF Vectorization**: Tokenizes n-gram character transitions without token boundary bias.
-- ⚡ **Shannon Entropy Metric**: Real-time information entropy evaluation measuring password complexity in raw bits of security.
-- 📋 **Deep Rule-Based Heuristic Audit**: Immediate feedback across 5 critical parameters: length, casing diversity, numerical entropy, and special symbol complexity.
-- 💡 **AI Fortification Generator**: Dynamically crafts resilient, hardened password recommendations based on weaknesses discovered in the input.
-- 🎨 **Futuristic Cyberpunk UI / UX**:
+- 📊 **Shannon Entropy Metric**: Real-time information entropy evaluation measuring password complexity in raw bits of security.
+- 🔍 **Deep Rule-Based Heuristic Audit**: Immediate feedback across 5 critical parameters: length, casing diversity, numerical entropy, and special symbol complexity.
+- 🔐 **AI Fortification Generator**: Dynamically crafts resilient, hardened password recommendations based on weaknesses discovered in the input.
+- ⚡ **Futuristic Cyberpunk UI / UX**:
   - Built with React 19, Vite, and Tailwind CSS.
   - Interactive particle backdrops via `@tsparticles/react`.
   - Fluid micro-animations powered by `framer-motion`.
 - 🔌 **Dual Interfaces**:
   - High-performance **REST API** (`/api/analyze`) for seamless integration into auth pipelines.
   - Standalone **Jinja2 Flask Dashboard** for low-footprint server-rendered environments.
-- 🔒 **Zero Telemetry & Privacy Preservation**: Password inputs are processed strictly in-memory and never permanently recorded or stored.
+- 🛡️ **Zero Telemetry & Privacy Preservation**: Password inputs are processed strictly in-memory and never permanently recorded or stored.
 
 ---
 
@@ -130,9 +130,12 @@ cd KAVACH-AI
 1. **Create and activate a virtual environment:**
 
    ```bash
-   # Windows
+   # Windows (PowerShell)
    python -m venv venv
-   venv\Scripts\activate
+   .\venv\Scripts\Activate.ps1
+
+   # Windows (cmd.exe)
+   venv\Scripts\activate.bat
 
    # macOS / Linux
    python3 -m venv venv
@@ -147,7 +150,7 @@ cd KAVACH-AI
 
 3. **(Optional) Re-train the Machine Learning Models:**
 
-   *Note: Pre-trained models are already provided in the `models/` directory.*
+   *Note: Pre-trained models are already included in the `models/` directory.*  
    If you wish to train them from scratch using `Dataset/data.csv`:
 
    ```bash
@@ -160,7 +163,7 @@ cd KAVACH-AI
    python app.py
    ```
 
-   The backend will be available at: `http://127.0.0.1:5000`
+   The backend API will start at: `http://127.0.0.1:5000`
 
 ---
 
@@ -218,11 +221,11 @@ Evaluates a given password string against all machine learning models, heuristic
 
 ---
 
-## 📊 Machine Learning Pipeline
+## 🔬 Machine Learning Pipeline
 
 1. **Tokenization Strategy**: Custom character-level tokenizer (`word_divide_char`) extracting character frequencies and sub-word structures without vocabulary constraints.
 2. **Feature Representation**: `TfidfVectorizer` mapping character sequences into high-dimensional vector space.
-3. **Training & Split**:
+3. **Training & Validation**:
    - 80% Training partition / 20% Validation test partition.
    - Ground truth labels categorized into:
      - `0`: Weak
@@ -231,9 +234,9 @@ Evaluates a given password string against all machine learning models, heuristic
 
 ---
 
-## 🛡️ Security & Privacy Notice
+## 🔒 Security & Privacy Notice
 
-- **No Logging**: Passwords analyzed through the interface are processed in volatile memory and never persisted into databases or log files.
+- **No Logging**: Passwords analyzed through the interface are processed exclusively in volatile memory and never persisted into databases or log files.
 - **Client Processing Capable**: The frontend architecture is built to support pure client-side inspection when integrated with WebAssembly or on-device inference runners.
 
 ---
@@ -243,14 +246,14 @@ Evaluates a given password string against all machine learning models, heuristic
 Contributions, issues, and feature requests are welcome!
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingSecurityFeature`)
+2. Create your feature branch (`git checkout -b feature/SecurityImprovement`)
 3. Commit your changes (`git commit -m 'feat: Add entropy metric benchmark'`)
-4. Push to the branch (`git push origin feature/AmazingSecurityFeature`)
+4. Push to the branch (`git push origin feature/SecurityImprovement`)
 5. Open a Pull Request
 
 ---
 
-## 📜 License
+## 📄 License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
 
